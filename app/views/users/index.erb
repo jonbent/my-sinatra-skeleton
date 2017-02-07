@@ -1,0 +1,26 @@
+<% if current_user %>
+<div class="container">
+<h3>This is your account</h3>
+</div>
+<div class="container">
+  <p><%= @user.username %><p>
+
+
+
+  <table>
+    <tr>
+      <th>Username: </th>
+      <th>Email: </th>
+    </tr>
+
+    <td><%= @user.username %></td>
+    <td><%= @user.email %></td>
+  </table>
+
+  <br>
+
+
+<div>
+  <a href='/users/<%= @user.id %>/edit'>Edit you profile</a>
+</div>
+<% end %>
