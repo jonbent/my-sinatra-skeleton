@@ -7,7 +7,7 @@ class User < ActiveRecord::Base
 
 
 
-	def password
+  def password
     @password ||= BCrypt::Password.new(hashed_password)
   end
 
