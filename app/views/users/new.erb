@@ -1,0 +1,23 @@
+<div class="container">
+  <h3>Create a new user</h3>
+
+
+    <form method="post" action="/users">
+      <div class="form-2">
+        Name: <input id="users_name_input" name="user[name]" type="text" value="<%= @user.try(:name) %>" required>
+        <br><br>
+
+        Username: <input id="username_input" name="user[username]" type="text" value="<%= @user.try(:username) %>" required>
+        <br><br>
+
+        Email: <input id="description_title_input" name="user[email]" type="text" value="<%= @user.try(:email) %>" required>
+        <br><br>
+
+        Password: <input id="price_input" name="user[password]" type="text" value="<%= @user.try(:password) %>" required>
+        <br><br>
+
+        <input type="submit" value="Create a new user" class="button">
+      </div>
+    </form>
+
+</div>

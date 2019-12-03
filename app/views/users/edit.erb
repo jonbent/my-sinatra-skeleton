@@ -1,0 +1,26 @@
+<div class="container">
+  <h3>Edit your account</h4>
+    <table>
+
+      <form method="post" action="/users/<%= @user.id %>">
+        <input type="hidden" name="_method" value="put">
+
+        
+        Name: <input id="name_input" name="user[name]" type="text" value="<%= @user.try(:name) %>" required>
+        <br>
+
+        Email: <input id="email_input"  name="user[email]" type="text" value="<%= @user.try(:email) %>" required>
+        <br>
+
+        <input type="submit" value="Update Account" class="button">
+      </form>
+
+
+      <form method="post" action="/users/<%= @user.id %>">
+        <input type="hidden" name="_method" value="delete">
+        <input type="submit" value="Delete" class="button">
+      </form>
+
+
+    </table>
+  </div>
